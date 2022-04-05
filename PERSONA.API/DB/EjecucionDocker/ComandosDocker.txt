@@ -1,0 +1,6 @@
+docker build -f .\PERSONA.API\Dockerfile -t webapi .
+
+docker run -it -p 80:80 -d webapi
+
+
+--Para pobar el postman se debe cambiar el locahost con la ip que se le asigne al servicio en docker

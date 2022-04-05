@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "0413390c-feeb-4726-8d55-5463defdf529",
+		"name": "NTT_DATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Consultar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:61675/api/clientes/listar?OffSet=1&Limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"clientes",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "OffSet",
+									"value": "1"
+								},
+								{
+									"key": "Limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grabar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCliente\": 0,\r\n  \"idPersona\": 2,\r\n  \"contraseña\": \"prueba1\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/clientes/grabar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"clientes",
+								"grabar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCliente\": 15,\r\n  \"idPersona\": 2,\r\n  \"contraseña\": \"prueba1update\",\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/clientes/grabar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"clientes",
+								"grabar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCliente\": 15,\r\n  \"estado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/clientes/eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"clientes",
+								"eliminar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Consultar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:61675/api/cuentas/listar?OffSet=1&Limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"cuentas",
+								"listar"
+							],
+							"query": [
+								{
+									"key": "OffSet",
+									"value": "1"
+								},
+								{
+									"key": "Limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grabar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 0,\r\n  \"idCliente\": 1,\r\n  \"numeroCuenta\": \"0012\",\r\n  \"tipoCuenta\": \"corriente\",\r\n  \"valorTope\": 1000,\r\n  \"saldoInicial\": 10,\r\n  \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/cuentas/grabar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"cuentas",
+								"grabar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 6,\r\n  \"idCliente\": 1,\r\n  \"numeroCuenta\": \"0012\",\r\n  \"tipoCuenta\": \"corriente\",\r\n  \"valorTope\": 1000,\r\n  \"saldoInicial\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/cuentas/grabar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"cuentas",
+								"grabar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCuenta\": 6,\r\n  \"estado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:61675/api/cuentas/eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "61675",
+							"path": [
+								"api",
+								"cuentas",
+								"eliminar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
